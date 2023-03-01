@@ -1,0 +1,27 @@
+﻿@model TypeCreateVM
+
+<h1 class="h3 mb-3">Update type</h1>
+<div class="card">
+	<div class="card-body">
+		<form method="post">
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-xl-6">
+						<label asp-for="Name">Name</label>
+						<input asp-for="Name" class="form-control" placeholder="Enter type name" />
+						<span asp-validation-for="Name" class="text-danger"></span>
+					</div>
+					<div class="col-xl-6">
+						<label asp-for="Percentage">Percentage</label>
+						<input type="number" asp-for="Percentage" class="form-control" placeholder="Enter percentage" />
+						<span asp-validation-for="Percentage" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="mt-1">
+				<button type="submit" class="btn btn-primary">Update</button> <a asp-action="details" asp-controller="subject" asp-route-id="@ViewBag.Id" asp-route-page="settings" asp-route-control="tasktypes" class="btn btn-outline-secondary">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

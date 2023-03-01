@@ -1,0 +1,56 @@
+﻿@model AttendanceCreateVM
+@{
+	int count = 0;
+}
+<h1 class="h3 mb-3">Update attendance</h1>
+
+<div class="card">
+	<div class="card-body">
+		<form method="post">
+			<div class="mb-2">
+				<label asp-for="Date">Choose date</label>
+				<input asp-for="Date" class="form-control" />
+				<span class="text-danger" asp-validation-for="Date"></span>
+			</div>
+			<div class="mb-2">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Student</th>
+							<th scope="col">Status</th>
+							<th scope="col">Comment</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (AttendanceVM item in ViewBag.Students)
+						{
+							count++;
+							<tr>
+								<td>@count</td>
+								<td>@item.Student.User.FirstName @item.Student.User.LastName [@item.Student.User.UserName]</td>
+								<td>
+									<input type="hidden" name="StudentIds" value="@item.Student.User.Id">
+									<select class="form-control" name="Marks">
+										<option value="1">Participate</option>
+										<option value="0">Absent</option>
+										<option value="2">Permitted</option>
+									</select>
+								</td>
+
+								<td><input type="text" class="form-control" name="Comments" placeholder="Comment" /></td>
+							</tr>
+						}
+						<span class="text-danger" asp-validation-for="StudentIds"></span>
+						<span class="text-danger" asp-validation-for="Marks"></span>
+						<span class="text-danger" asp-validation-for="Comments"></span>
+					</tbody>
+				</table>
+			</div>
+			<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+			<div class="mt-1">
+				<button type="submit" class="btn btn-primary">Add</button> <a asp-action="index" asp-controller="subject" asp-route-id="@Model.Id" class="btn btn-outline-secondary">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+﻿@model List<UserVM>
+@{
+	int count = 0;
+}
+<div class="row mb-3">
+	<div class="col-6">
+		<h1 class="h3">Users</h1>
+	</div>
+	<div class="col-6 d-flex justify-content-end">
+		<a asp-action="create" class="btn btn-primary text-center"><i class="align-middle me-1" data-feather="plus-circle"></i>Create new</a>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-xl-8">
+		<div class="card">
+			<div class="card-body">
+				<div class="table-responsive">
+					<table id="datatables-reponsive" class="table table-striped" style="width:100%">
+						<thead>
+							<tr>
+								<th class="text-center">#</th>
+								<th class="text-center">Photo</th>
+								<th class="text-center">Full name</th>
+								<th class="text-center">Role</th>
+								<th class="text-center">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (UserVM item in Model)
+							{
+								count++;
+								<tr>
+									<th scope="row">@count</th>
+									<td><img class="avatar img-fluid rounded" src="~/assets/img/avatars/@item.User.PhotoPath" /></td>
+									<td>@item.User.FirstName @item.User.LastName (@item.User.UserName)</td>
+									<td>@item.Role</td>
+									<td class="text-center">
+										<a asp-action="details" asp-route-id="@item.User.Id" class="btn btn-info btn-details btn-sm"><i class="align-middle" data-feather="eye"></i></a>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-xl-4">
+		<div class="card" id="detailscard">
+			<div class="m-auto">Click info button to show details</div>
+		</div>
+	</div>
+</div>

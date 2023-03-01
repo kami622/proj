@@ -1,0 +1,17 @@
+﻿@model DepartmentUpdateVM
+<h1 class="h3 mb-3">Update department</h1>
+
+<div class="card">
+	<div class="card-body">
+		<form method="post">
+			<div class="mb-2">
+				<label asp-for="Name">Name <span class="text-danger">*</span></label>
+				<input asp-for="Name" class="form-control" placeholder="Enter department name" />
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+			<div class="mt-1">
+				<button type="submit" class="btn btn-primary">Update</button> <a asp-action="index" class="btn btn-outline-secondary">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+﻿@model GroupCreateVM
+<h1 class="h3 mb-3">Create new group</h1>
+
+<div class="card">
+	<div class="card-body">
+		<form method="post">
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-6">
+						<label asp-for="DepartmentId">Department <span class="text-danger">*</span></label>
+						<select class="form-control choices-single" asp-for="DepartmentId" asp-items="@(new SelectList(ViewBag.Departments, "Id", "Name"))"></select>
+						<span asp-validation-for="DepartmentId" class="text-danger"></span>
+					</div>
+					<div class="col-6">
+						<label asp-for="Name">Name <span class="text-danger">*</span></label>
+						<input asp-for="Name" class="form-control" placeholder="Enter group name" />
+						<span asp-validation-for="Name" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div class="mt-1">
+				<button type="submit" class="btn btn-primary">Create</button> <a asp-action="index" class="btn btn-outline-secondary">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

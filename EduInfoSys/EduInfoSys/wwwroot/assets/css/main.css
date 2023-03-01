@@ -1,0 +1,9 @@
+﻿.list-clickable:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.item-clickable:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+}

@@ -1,0 +1,58 @@
+﻿@model List<GroupStudent>
+@{
+	int count = 0;
+	List<TaskGrade> grades = (ViewBag.Grades is not null ? ViewBag.Grades : new List<TaskGrade>());
+	List<StudentTask> studTasks = (ViewBag.Files is not null ? ViewBag.Files : new List<StudentTask>());
+}
+<h1 class="h3 mb-3">Task Details</h1>
+
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body m-sm-3 m-md-5">
+				<div class="mb-0">
+					<h3 class="text-primary"><strong>@ViewBag.Task.Name</strong></h3>
+
+					<form method="post">
+						<table class="table table-striped" style="width:100%">
+							<thead class="table-primary">
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Student</th>
+									<th scope="col">File</th>
+									<th scope="col">Points</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (GroupStudent student in Model)
+								{
+									<input type="hidden" name="StudentIds" value="@student.User.Id">
+									count++;
+									StudentTask studTask = studTasks.Find(st => st.Student.Id == student.User.Id);
+									TaskGrade grade = grades.Find(st => st.User.Id == student.User.Id);
+									<tr>
+										<th scope="row">@count</th>
+										<td>@student.User.FirstName @student.User.LastName (@student.User.UserName)</td>
+										<td>
+											@if (studTask is not null)
+											{
+												<a href="~/assets/files/student/@(studTask.FilePath)">Show/Download</a>
+											}
+											else
+											{
+												<p>No file attached</p>
+											}
+										</td>
+										<td><input type="number" min="0" max="100" class="form-control" name="Points" placeholder="Enter points" value="@(grade is not null ? grade.Point : "0")" /></td>
+									</tr>
+								}
+							</tbody>
+						</table>
+						<button type="submit" class="btn btn-primary">Update grades</button>
+						<a asp-action="details" asp-route-id="@ViewBag.Task.Id" class="btn btn-outline-secondary">Go back</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

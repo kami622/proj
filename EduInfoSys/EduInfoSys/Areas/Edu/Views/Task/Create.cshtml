@@ -1,0 +1,73 @@
+﻿@model TaskCreateVM
+
+<h1 class="h3 mb-3">Create new task</h1>
+
+<div class="card">
+	<div class="card-body">
+		<form id="createTaskForm" method="post" asp-action="create" asp-route-id="@Model.Id">
+			<div class="mb-2">
+				<label asp-for="Name">Name</label>
+				<input id="#taskName" asp-for="Name" class="form-control" />
+				<span class="text-danger" asp-validation-for="Name"></span>
+			</div>
+			<div class="mb-2">
+				<label>Description</label>
+				<div class="clearfix">
+					<div id="quill-toolbar">
+						<span class="ql-formats">
+							<button class="ql-bold"></button>
+							<button class="ql-italic"></button>
+							<button class="ql-underline"></button>
+							<button class="ql-strike"></button>
+						</span>
+						<span class="ql-formats">
+							<button class="ql-list" value="ordered"></button>
+							<button class="ql-list" value="bullet"></button>
+							<button class="ql-indent" value="-1"></button>
+							<button class="ql-indent" value="+1"></button>
+						</span>
+						<span class="ql-formats">
+							<button class="ql-link"></button>
+						</span>
+						<span class="ql-formats">
+							<button class="ql-clean"></button>
+						</span>
+					</div>
+					<div id="quill-editor">@(Model is not null ? Html.Raw(Model.Description) : "")</div>
+				</div>
+				<input type="hidden" asp-for="Description" id="description" />
+				<span class="text-danger" asp-validation-for="Description"></span>
+			</div>
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-xl-6">
+						<label asp-for="TaskTypeId">Task type</label>
+						<select id="taskTypeId" class="form-control" asp-for="TaskTypeId" asp-items="@(new SelectList(ViewBag.TaskTypes, "Id", "Name"))"></select>
+						<span class="text-danger" asp-validation-for="TaskTypeId"></span>
+					</div>
+					<div class="col-xl-6">
+						<input id="isNeedsFile" asp-for="IsNeedsFile" /> <label asp-for="IsNeedsFile">Allow file attachment</label>
+						<div><span class="text-danger" asp-validation-for="IsNeedsFile"></span></div>
+					</div>
+				</div>
+			</div>
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-xl-6">
+						<label asp-for="StartsAt">Starts At</label>
+						<input id="#startsAt" asp-for="StartsAt" class="form-control" />
+						<span class="text-danger" asp-validation-for="StartsAt"></span>
+					</div>
+					<div class="col-xl-6">
+						<label asp-for="EndsAt">Ends At</label>
+						<input id="#endsAt" asp-for="EndsAt" class="form-control" />
+						<span class="text-danger" asp-validation-for="EndsAt"></span>
+					</div>
+				</div>
+			</div>
+			<div class="mt-1">
+				<button id="createTaskBtn" type="submit" class="btn btn-primary">Create</button> <a asp-action="details" asp-controller="subject" asp-route-id="@Model.Id" asp-route-page="tasks" class="btn btn-outline-secondary">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,60 @@
+﻿@model List<SubjectSchedule>
+@{
+	int count = 0;
+}
+<div class="row mb-3">
+	<div class="col-6">
+		<h1 class="h3">Schedule</h1>
+	</div>
+	<div class="col-6 d-flex justify-content-end">
+		<a asp-action="create" asp-controller="schedule" asp-route-id="@ViewBag.Id" class="btn btn-primary">Create new</a>
+	</div>
+</div>
+<div class="table-responsive">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Name</th>
+				<th scope="col">Day of week</th>
+				<th scope="col">Starts At</th>
+				<th scope="col">Ends At</th>
+				<th scope="col">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (SubjectSchedule item in Model)
+			{
+				count++;
+				string day = string.Empty;
+				switch(item.WeekDay)
+				{
+					case 1: day = "Monday"; break;
+					case 2: day = "Tuesday"; break;
+					case 3: day = "Wednesday"; break;
+					case 4: day = "Thursday"; break;
+					case 5: day = "Friday"; break;
+					case 6: day = "Saturday"; break;
+					case 7: day = "Sunday"; break;
+				}
+				<tr>
+					<th scope="row">@count</th>
+					<td>@item.Subject.Name</td>
+					<td>@day</td>
+					<td>@item.StartTime.ToString("HH:mm")</td>
+					<td>@item.EndTime.ToString("HH:mm")</td>
+					<td>
+						@if (ViewBag.Id == item.Subject.Id)
+						{
+							<a asp-action="update" asp-controller="schedule" asp-route-id="@item.Id" class="btn btn-info">Edit</a> <a asp-action="delete" asp-controller="schedule" asp-route-id="@item.Id" class="btn btn-danger btn-delete">Delete</a>
+						}
+						else
+						{
+							<p>-</p>
+						}
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,29 @@
+﻿@model List<Log>
+
+<div class="col-6">
+	<h1 class="h3">Users</h1>
+</div>
+
+<div class="card">
+	<div class="card-body">
+		<table id="datatables-reponsive" class="table table-striped" style="width:100%">
+			<thead>
+				<tr>
+					<th scope="col">Date</th>
+					<th scope="col">Heading</th>
+					<th scope="col">Text</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (Log item in Model)
+				{
+					<tr>
+						<th scope="row">@item.Date.ToString("dd.MM.yy HH:mm:ss")</th>
+						<td>@item.Heading</td>
+						<td>@item.Text</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>

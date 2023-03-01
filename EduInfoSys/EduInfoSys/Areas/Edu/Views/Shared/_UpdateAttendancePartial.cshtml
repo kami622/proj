@@ -1,0 +1,27 @@
+﻿@model AttendanceUpdateVM
+<form id="updattform" method="post" asp-action="update" data-id="@Model.Id">
+	<div class="mb-2">
+		Student: <input type="text" class="form-control" readonly placeholder="@Model.Student.FirstName @Model.Student.LastName" />
+	</div>
+	<div class="mb-2">
+		<div class="row">
+			<div class="col-xl-6">
+				<label asp-for="Mark">Mark</label>
+				<select id="mark" asp-for="Mark" class="form-control">
+					<option value="1">Participate</option>
+					<option value="0">Absent</option>
+					<option value="2">Permitted</option>
+				</select>
+				<span class="text-danger" asp-validation-for="Mark"></span>
+			</div>
+			<div class="col-xl-6">
+				<label asp-for="Comment">Comment</label>
+				<input id="comment" asp-for="Comment" class="form-control" />
+				<span class="text-danger" asp-validation-for="Comment"></span>
+			</div>
+		</div>
+	</div>
+	<div class="mt-1">
+		<button type="submit" id="updattbtn" class="btn btn-primary">Update</button>
+	</div>
+</form>

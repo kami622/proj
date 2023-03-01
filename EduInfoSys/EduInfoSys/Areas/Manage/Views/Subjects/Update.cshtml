@@ -1,0 +1,38 @@
+﻿@model SubjectUpdateVM
+<h1 class="h3 mb-3">Update subject</h1>
+
+<div class="card">
+	<div class="card-body">
+		<form method="post">
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-6">
+						<label asp-for="GroupId">Group</label>
+						<select class="form-control choices-single" asp-for="GroupId">
+							@foreach (Group item in ViewBag.Groups)
+							{
+								if (Model is not null && Model.GroupId == item.Id)
+								{
+									<option selected value="@item.Id">@item.Name [@item.Department.Name]</option>
+								}
+								else
+								{
+									<option value="@item.Id">@item.Name [@item.Department.Name]</option>
+								}
+							}
+						</select>
+						<span asp-validation-for="GroupId" class="text-danger"></span>
+					</div>
+					<div class="col-6">
+						<label asp-for="Name">Subject name</label>
+						<input asp-for="Name" class="form-control" placeholder="Enter subject name" />
+						<span asp-validation-for="Name" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div class="mt-1">
+				<button type="submit" class="btn btn-primary">Update</button> <a asp-action="index" class="btn btn-outline-secondary">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

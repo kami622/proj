@@ -1,0 +1,193 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EduInfoSys.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EduInfoSys.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\css\\dark.css",
+      "PackagePath": "staticwebassets\\assets\\css\\dark.css"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\css\\light.css",
+      "PackagePath": "staticwebassets\\assets\\css\\light.css"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\assets\\css\\main.css"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\files\\student\\0b502368-daa8-414a-b2d5-09ea789e4a3d61jGM3RNmLL.AC_SS144.jpg",
+      "PackagePath": "staticwebassets\\assets\\files\\student\\0b502368-daa8-414a-b2d5-09ea789e4a3d61jGM3RNmLL.AC_SS144.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\files\\student\\1254b6bd-4e59-40e5-828e-5a524c221fad61jGM3RNmLL.AC_SS144.jpg",
+      "PackagePath": "staticwebassets\\assets\\files\\student\\1254b6bd-4e59-40e5-828e-5a524c221fad61jGM3RNmLL.AC_SS144.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\390a4188-86a8-4e4b-9f20-93a9a77209dc61jGM3RNmLL.AC_SS144.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\390a4188-86a8-4e4b-9f20-93a9a77209dc61jGM3RNmLL.AC_SS144.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\449a9639-6142-46d9-a2fe-e41b9e6fdd9fdaryl.png",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\449a9639-6142-46d9-a2fe-e41b9e6fdd9fdaryl.png"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\4de3fa1a-1a83-4bc5-9e15-ddea09a61cc2rickgrimes.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\4de3fa1a-1a83-4bc5-9e15-ddea09a61cc2rickgrimes.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\8f953839-46f1-4fb1-91b7-d1042b22b53061jGM3RNmLL.AC_SS144.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\8f953839-46f1-4fb1-91b7-d1042b22b53061jGM3RNmLL.AC_SS144.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\a6a7d8e2-b045-4d1f-8e25-c4e7dabad7c7rickgrimes.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\a6a7d8e2-b045-4d1f-8e25-c4e7dabad7c7rickgrimes.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar-2.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar-3.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar-4.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\avatar-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar-5.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\avatar.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\b068ae4e-51fd-4f21-a5a8-7b349601323661jGM3RNmLL.AC_SS144.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\b068ae4e-51fd-4f21-a5a8-7b349601323661jGM3RNmLL.AC_SS144.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\avatars\\no-photo.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\no-photo.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\flags\\de.png",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\de.png"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\flags\\es.png",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\es.png"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\flags\\ru.png",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\ru.png"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\flags\\us.png",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\us.png"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\icons\\brand-1.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\brand-1.svg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\icons\\brand-2.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\brand-2.svg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\icons\\brand-3.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\brand-3.svg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\icons\\brand-4.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\brand-4.svg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\icons\\brand-5.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\brand-5.svg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\icons\\icon-48x48.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\icon-48x48.png"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\photos\\unsplash-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\photos\\unsplash-1.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\photos\\unsplash-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\photos\\unsplash-2.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\img\\photos\\unsplash-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\photos\\unsplash-3.jpg"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\js\\app.js",
+      "PackagePath": "staticwebassets\\assets\\js\\app.js"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\js\\datatables.js",
+      "PackagePath": "staticwebassets\\assets\\js\\datatables.js"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\js\\fullcalendar.js",
+      "PackagePath": "staticwebassets\\assets\\js\\fullcalendar.js"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\assets\\js\\settings.js",
+      "PackagePath": "staticwebassets\\assets\\js\\settings.js"
+    },
+    {
+      "Id": "D:\\experiment\\EduInfoSys\\EduInfoSys\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.EduInfoSys.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.EduInfoSys.props",
+      "PackagePath": "build\\EduInfoSys.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.EduInfoSys.props",
+      "PackagePath": "buildMultiTargeting\\EduInfoSys.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.EduInfoSys.props",
+      "PackagePath": "buildTransitive\\EduInfoSys.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

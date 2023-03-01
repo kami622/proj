@@ -1,0 +1,37 @@
+﻿@model List<SubjectSource>
+@{
+	int count = 0;
+}
+
+<h1 class="h3 mb-3">Subject notes</h1>
+
+<div class="card">
+	<div class="card-body">
+		<table id="datatables-reponsive" class="table table-striped" style="width:100%">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Name</th>
+					<th scope="col">URL</th>
+					<th scope="col">Subject</th>
+					<th scope="col">Teacher</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (SubjectSource item in Model)
+				{
+					count++;
+					<tr>
+						<th scope="row">@count</th>
+						<td>@item.Name</td>
+						<td>@item.Url</td>
+						<td>@item.Teacher.Subject.Name</td>
+						<td>@item.Teacher.User.FirstName @item.Teacher.User.LastName [@item.Teacher.User.UserName]</td>
+						<td><a asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger btn-delete"><i class="align-middle" data-feather="trash-2"></i></a></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>

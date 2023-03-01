@@ -1,0 +1,70 @@
+﻿@model UserVM
+<div class="card-header">
+	@if ((Model.Role != "Super Administrator" && Model.Role != "Administrator") || Model.Role == "Administrator" && ViewBag.IsSuper == true)
+	{
+		<div class="card-actions float-end">
+			<div class="dropdown position-relative">
+				<a href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" class="">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+				</a>
+				<div class="dropdown-menu dropdown-menu-end">
+					<a class="dropdown-item" asp-action="update" asp-route-id="@Model.User.Id">Edit</a>
+					<a class="dropdown-item btn-userdelete" asp-action="delete" asp-route-id="@Model.User.Id">Delete</a>
+				</div>
+			</div>
+		</div>
+	}
+	<h5 class="card-title mb-0">@Model.User.UserName</h5>
+</div>
+<div class="card-body">
+	<div class="row g-0">
+		<div class="col-sm-3 col-xl-12 col-xxl-3 text-center">
+			<img src="~/assets/img/avatars/@Model.User.PhotoPath" width="64" height="64" class="img-fluid rounded m-3" alt="@Model.User.UserName">
+		</div>
+		<div class="col-sm-9 col-xl-12 col-xxl-9">
+			<strong>Details</strong>
+			<p>
+				@(Model.User.AdditionalInfo is null ? "No additional information" : Model.User.AdditionalInfo)
+			</p>
+		</div>
+	</div>
+
+	<table class="table table-sm mt-2 mb-4">
+		<tbody>
+			<tr>
+				<th>Identificator</th>
+				<td>@Model.User.Id</td>
+			</tr>
+			<tr>
+				<th>Username</th>
+				<td>@Model.User.UserName</td>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<td>@Model.User.FirstName @Model.User.LastName</td>
+			</tr>
+			<tr>
+				<th>Role</th>
+				<td>@Model.Role</td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td>@(Model.User.Email is null ? "No email address" : Model.User.Email)</td>
+			</tr>
+			<tr>
+				<th>Phone</th>
+				<td>@(Model.User.PhoneNumber is null ? "No phone number" : Model.User.PhoneNumber)</td>
+			</tr>
+			<tr>
+				<th>Birth date</th>
+				<td>@Model.User.BirthDate.ToString("dd MMM, yyyy")</td>
+			</tr>
+			<tr>
+				<th>Status</th>
+				<td><span class="badge bg-success">Active</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+</div>

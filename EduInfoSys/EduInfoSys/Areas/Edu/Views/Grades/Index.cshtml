@@ -1,0 +1,31 @@
+﻿@{
+	List<Group> groups = ViewBag.Groups;
+	List<Subject> subjects = ViewBag.Subjects;
+	List<TaskType> types = ViewBag.TaskTypes;
+	List<TaskGrade> grades = ViewBag.Grades;
+}
+<h1 class="h3 mb-3">My Grades</h1>
+
+<div class="card">
+	<div class="card-body">
+		@foreach (Group group in groups)
+		{
+			<h4 class="text-center text-primary"><strong>@group.Name [@group.Department.Name]</strong></h4>
+
+			<div class="container">
+				<ul class="list-group">
+					@foreach (Subject subject in subjects.Where(s => s.Group.Id == group.Id))
+					{
+						double overall = 0;
+						@foreach (TaskType type in types.Where(t => t.Subject.Id == subject.Id))
+						{
+							IEnumerable<TaskGrade> typeGrades = grades.Where(g => g.Task.Type.Id == type.Id);
+							overall += (typeGrades.Sum(g => g.Point) / typeGrades.Count()) * (type.Percentage / types.Where(t => t.Subject.Id == subject.Id).Sum(t => t.Percentage));
+						}
+						<li class="list-group-item"><div class="row"><div class="col-6">Subject: @group.Name</div><div class="col-6 text-end"><b>Overall: @(overall)/100</b></div></div></li>
+					}
+				</ul>
+			</div>
+		}
+	</div>
+</div>

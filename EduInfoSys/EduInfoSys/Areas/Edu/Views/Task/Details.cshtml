@@ -1,0 +1,78 @@
+﻿@model TaskVM
+<h1 class="h3 mb-3">Task Details</h1>
+
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body m-sm-3 m-md-5">
+				<div class="mb-0">
+					<h3 class="text-primary"><strong>@Model.SubjectTask.Name</strong></h3>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="badge bg-warning my-1">Not Completed</div>
+					</div>
+					<div class="col-md-6 text-md-end">
+						<div><strong>Starts At @Model.SubjectTask.StartsAt.ToString("MMMM dd, yyyy. HH:mm")</strong></div>
+						<div><strong>Due @Model.SubjectTask.EndsAt.ToString("MMMM dd, yyyy. HH:mm")</strong></div>
+					</div>
+				</div>
+
+				<h4 class="mb-1">Type: @Model.SubjectTask.Type.Name</h4>
+				@if (Model.TaskGrade is not null)
+				{
+					<h4>Grade: <strong>@Model.TaskGrade.Point points</strong> (@Model.TaskGrade.Point/100)</h4>
+				}
+				<hr class="my-4" />
+				<h5><strong>Description</strong></h5>
+				<h5>@Html.Raw(Model.SubjectTask.Description)</h5>
+
+				<div class="border text-center container">
+					@if (ViewBag.Role == "student")
+					{
+						<h4 class="m-3"><strong>Attachment</strong></h4>
+						@if (Model.SubjectTask.IsNeedsFile == true)
+						{
+							@if (Model.StudentTask is null)
+							{
+								<form method="post" enctype="multipart/form-data">
+									<input type="file" name="FormFile" class="form-control" />
+									<span class="text-danger">@TempData["CustomError"]</span>
+									<p class="text-sm">
+										<strong>Note:</strong>
+										Allowed file types: <b>.txt</b>, <b>.doc</b>, <b>.docx</b>, <b>.jpg</b>, <b>.jfif</b>, <b>.png</b>, <b>.ppt</b>, <b>.pptx</b>, <b>.xls</b>, <b>.xlsx</b>, <b>.pdf</b>,  <b>.zip</b>.
+									</p>
+
+									<button type="submit" class="mb-2 btn btn-primary form-control">
+										Attach file
+									</button>
+								</form>
+							}
+							else
+							{
+								<strong><a target="_blank " href="~/assets/files/student/@Model.StudentTask.FilePath">Show/download my file</a></strong>
+							}
+						}
+						else
+						{
+							<strong>This task doesn't need a file</strong>
+						}
+					}
+					else
+					{
+						<h4 class="m-3"><strong>Actions</strong></h4>
+						<div class="row">
+							<div class="col-xl"><a class="btn btn-outline-primary form-control" asp-action="attachments" asp-route-id="@Model.SubjectTask.Id">Grades</a></div>
+							<div class="col-xl"><a class="btn btn-outline-info form-control" asp-action="update" asp-route-id="@Model.SubjectTask.Id">Edit</a></div>
+							<div class="col-xl"><a class="btn btn-outline-danger btn-deldetails form-control" asp-action="delete" asp-route-id="@Model.SubjectTask.Id">Delete</a></div>
+						</div>
+					}
+				</div>
+				<a asp-action="details" asp-controller="subject" asp-route-id="@Model.SubjectTask.Type.Subject.Id" asp-route-page="tasks" class="btn btn-outline-secondary goback">
+					Go back
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

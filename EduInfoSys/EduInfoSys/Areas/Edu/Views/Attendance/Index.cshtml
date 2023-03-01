@@ -1,0 +1,70 @@
+﻿@model List<Attendance>
+@{
+	int count = 0;
+	IEnumerable<IGrouping<DateTime, Attendance>> groupedDate = Model.OrderBy(at => at.Date).GroupBy(at => at.Date);
+	List<DateTime> dates = new();
+}
+<div class="row mb-3">
+	<div class="col-6">
+		<h1 class="h3">Attendance</h1>
+	</div>
+	<div class="col-6 d-flex justify-content-end">
+		<a asp-action="create" asp-controller="attendance" asp-route-id="@ViewBag.Id" class="btn btn-primary">Mark attendance</a>
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-body">
+		<div class="table-responsive">
+			<table class="table" style="width: 100%">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Full name</th>
+						@foreach (IGrouping<DateTime, Attendance> item in groupedDate)
+						{
+							dates.Add(item.Key);
+							<th scope="col">@item.Key.ToString("dd.MM.yy")</th>
+						}
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (IGrouping<AppUser, Attendance> query in Model.GroupBy(at => at.User))
+					{
+						Attendance item = Model.Find(at => at.User == query.Key);
+						count++;
+						<tr>
+							<th scope="row">@count</th>
+							<td>@item.User.FirstName @item.User.LastName [@item.User.UserName]</td>
+							@foreach (DateTime date in dates)
+							{
+								Attendance attendance = Model.Find(at => at.User == query.Key && at.Date == date);
+								@if (attendance is null)
+								{
+									<td><span class="badge bg-secondary">None</span></td>
+								}
+								else
+								{
+									<td>
+										@if (attendance.Mark == 0)
+										{
+											<span class="badge bg-danger">Absent</span>
+										}
+										else if (attendance.Mark == 1)
+										{
+											<span class="badge bg-success">Participate</span>
+										}
+										else
+										{
+											<span class="badge bg-warning">Pleased</span>
+										}
+									</td>
+								}
+							}
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+﻿@model ScheduleCreateVM
+
+<h1 class="h3 mb-3">Add to schedule</h1>
+<div class="card">
+	<div class="card-body">
+		<form method="post">
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-xl-6">
+						<label asp-for="WeekDay">Day of week</label>
+						<select asp-for="WeekDay" class="form-control">
+							<option value="1">Monday</option>
+							<option value="2">Tuesday</option>
+							<option value="3">Wednesday</option>
+							<option value="4">Thursday</option>
+							<option value="5">Friday</option>
+							<option value="6">Saturday</option>
+							<option value="7">Sunday</option>
+						</select>
+						<span asp-validation-for="WeekDay" class="text-danger"></span>
+					</div>
+					<div class="col-xl-6">
+						<div class="row">
+							<div class="col-xl-6">
+								<label asp-for="StartTime">Start time</label>
+								<input type="time" asp-for="StartTime" class="form-control" placeholder="Start time" />
+								<span asp-validation-for="StartTime" class="text-danger"></span>
+							</div>
+							<div class="col-xl-6">
+								<label asp-for="EndTime">End time</label>
+								<input type="time" asp-for="EndTime" class="form-control" placeholder="End time" />
+								<span asp-validation-for="EndTime" class="text-danger"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="mt-1">
+				<button type="submit" class="btn btn-primary">Add</button> <a asp-action="details" asp-controller="subject" asp-route-id="@Model.Id" asp-route-page="settings" asp-route-control="schedule" class="btn btn-outline-secondary">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

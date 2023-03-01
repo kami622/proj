@@ -1,0 +1,231 @@
+﻿@model SubjectVM
+@{
+	int noteCount = 0;
+	int sourceCount = 0;
+}
+<h1 class="h3 mb-3">@Model.Subject.Group.Name - @Model.Subject.Name</h1>
+<a id="pageUrl" asp-action="details" asp-route-id="@Model.Subject.Id"></a>
+
+<div class="tab">
+	<ul class="nav nav-tabs d-flex justify-content-center" role="tablist">
+		<li class="nav-item" role="presentation"><a class="nav-link @(ViewBag.Page == "info" ? "active" : "")" href="#tab-1" data-bs-toggle="tab" role="tab" aria-selected="true"><i class="align-middle" data-feather="info"></i> Information</a></li>
+		<li class="nav-item" role="presentation"><a class="nav-link @(ViewBag.Page == "tasks" ? "active" : "")" href="#tab-2" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1"><i class="align-middle" data-feather="list"></i> Tasks</a></li>
+		<li class="nav-item" role="presentation"><a class="nav-link @(ViewBag.Page == "members" ? "active" : "")" href="#tab-3" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1">Members</a></li>
+		@if (Model.MemberRole == "Teacher")
+		{
+			<li class="nav-item" role="presentation"><a class="nav-link @(ViewBag.Page == "settings" ? "active" : "")" href="#tab-4" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1"><i class="align-middle" data-feather="settings"></i> Control</a></li>
+		}
+	</ul>
+	<div class="tab-content" style="background-color: ghostwhite;">
+		<div class="tab-pane @(ViewBag.Page == "info" ? "active" : "")" id="tab-1" role="tabpanel">
+			<div class="row mb-3">
+				<div class="col-xl-6"><h3 class="text-primary">Notes</h3></div>
+				@if (Model.MemberRole == "Teacher")
+				{
+					<div class="col-xl-6 d-flex justify-content-end"><a class="btn btn-primary" asp-action="create" asp-controller="note" asp-route-id="@Model.Subject.Id">Add note</a></div>
+				}
+			</div>
+			<table id="datatables-reponsive" class="table table-striped" style="width:100%">
+				<thead class="table-primary">
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Title</th>
+						<th scope="col">Date</th>
+						<th scope="col">Created by</th>
+						@if (Model.MemberRole == "Teacher")
+						{
+							<th scope="col">Actions</th>
+						}
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (SubjectNote note in Model.Notes)
+					{
+						noteCount++;
+						<tr class="item-clickable">
+							<th scope="row">@noteCount</th>
+							<td>@note.Title</td>
+							<td>@note.CreatedAt</td>
+							<td>@note.Teacher.User.FirstName @note.Teacher.User.LastName</td>
+							@if (Model.MemberRole == "Teacher")
+							{
+								<td><a asp-action="update" asp-controller="note" asp-route-id="@note.Id" class="btn btn-info">Edit</a> <a asp-action="delete" asp-controller="note" asp-route-id="@note.Id" class="btn btn-danger btn-delete">Delete</a></td>
+							}
+						</tr>
+					}
+				</tbody>
+			</table>
+			<hr />
+			<div class="row mb-3">
+				<div class="col-xl-6"><h3 class="text-primary">Sources</h3></div>
+				@if (Model.MemberRole == "Teacher")
+				{
+					<div class="col-xl-6 d-flex justify-content-end"><a class="btn btn-primary" asp-action="create" asp-controller="source" asp-route-id="@Model.Subject.Id">Add source</a></div>
+				}
+			</div>
+			<table id="datatables-reponsive2" class="table table-striped" style="width:100%">
+				<thead class="table-primary">
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Name</th>
+						<th scope="col">URL</th>
+						@if (Model.MemberRole == "Teacher")
+						{
+							<th scope="col">Actions</th>
+						}
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (SubjectSource source in Model.Sources)
+					{
+						sourceCount++;
+						<tr>
+							<th scope="row">@sourceCount</th>
+							<td>@source.Name</td>
+							<td><a href="@source.Url">@source.Url</a></td>
+							@if (Model.MemberRole == "Teacher")
+							{
+								<td><a asp-action="update" asp-controller="source" asp-route-id="@source.Id" class="btn btn-info">Edit</a> <a asp-action="delete" asp-controller="source" asp-route-id="@source.Id" class="btn btn-danger btn-delete">Delete</a></td>
+							}
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+		<div class="tab-pane @(ViewBag.Page == "tasks" ? "active" : "")" id="tab-2" role="tabpanel">
+			<div class="row mb-3">
+				<div class="col-xl-6">
+					<h3 class="text-primary">Tasks</h3>
+				</div>
+				@if (Model.MemberRole == "Teacher")
+				{
+					<div class="col-xl-6 d-flex justify-content-end">
+						<a class="btn btn-primary" asp-action="create" asp-controller="task" asp-route-id="@Model.Subject.Id">Create new</a>
+					</div>
+				}
+			</div>
+			<div class="row">
+				@foreach (TaskVM taskVM in Model.TaskVMs)
+				{
+					<div class="col-xl-4">
+						<div class="card taskCard list-clickable">
+							<div class="card-header px-4 pt-4">
+								<h5 class="card-title mb-0"><a class="taskName" asp-action="details" asp-controller="task" asp-route-id="@taskVM.SubjectTask.Id">@taskVM.SubjectTask.Name</a></h5>
+								<div class="row mb-0">
+									<div class="col-6">
+										<p>@taskVM.SubjectTask.Type.Name</p>
+									</div>
+									<div class="col-6">
+										@if (DateTime.Now > taskVM.SubjectTask.EndsAt)
+										{
+											<p class="text-end text-muted">Ended at @taskVM.SubjectTask.EndsAt.ToString("MMM. dd, yyyy. HH:mm")</p>
+										}
+										else
+										{
+											@if (DateTime.Now > taskVM.SubjectTask.StartsAt)
+											{
+												<p class="text-end text-muted">Due to @taskVM.SubjectTask.EndsAt.ToString("MMM. dd, yyyy. HH:mm")</p>
+											}
+											else
+											{
+												<p class="text-end text-muted">Starts at @taskVM.SubjectTask.StartsAt.ToString("MMM. dd, yyyy. HH:mm")</p>
+											}
+										}
+									</div>
+								</div>
+								@if (Model.MemberRole == "Student")
+								{
+									@if (taskVM.TaskGrade is not null)
+									{
+										<div class="badge bg-success my-2">Graded</div>
+									}
+									@if (DateTime.Now < taskVM.SubjectTask.StartsAt)
+									{
+										<div class="badge bg-primary my-2">Not Started</div>
+									}
+									else
+									{
+										@if (taskVM.SubjectTask.IsNeedsFile)
+										{
+											@if (taskVM.StudentTask is null)
+											{
+												@if (DateTime.Now > taskVM.SubjectTask.EndsAt)
+												{
+													<div class="badge bg-danger my-2">Missing</div>
+												}
+												else
+												{
+													<div class="badge bg-warning my-2">Not Completed</div>
+												}
+											}
+											else
+											{
+												<div class="badge bg-info my-2">Not Graded</div>
+											}
+										}
+										else
+										{
+											<div class="badge bg-info my-2">Not Graded</div>
+										}
+									}
+								}
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+		<div class="tab-pane @(ViewBag.Page == "members" ? "active" : "")" id="tab-3" role="tabpanel">
+			<h4 class="tab-title text-primary">Members</h4>
+			<div class="card">
+				<div class="card-body">
+					<ul class="container list-group">
+						@foreach (GroupStudent student in Model.Students)
+						{
+							<li class="list-group-item"><img class="avatar img-fluid" src="~/assets/img/avatars/@student.User.PhotoPath" /> @student.User.FirstName @student.User.LastName [@student.User.UserName]</li>							
+						}
+					</ul>
+				</div>
+			</div>
+		</div>
+		@if (Model.MemberRole == "Teacher")
+		{
+			<div class="tab-pane @(ViewBag.Page == "settings" ? "active" : "")" id="tab-4" role="tabpanel">
+				<div class="row">
+					<div class="col-md-3 col-xl-2">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="card-title mb-0">Subject Control</h5>
+							</div>
+
+							<div class="list-group list-group-flush" role="tablist">
+								<a class="list-group-item list-group-item-action subjectcontrol @(ViewBag.Control == "attendance" ? "active" : "")" data-bs-toggle="list" role="tab" asp-action="showattendance" asp-controller="attendance" asp-route-id="@Model.Subject.Id" aria-selected="true">
+									Attendances
+								</a>
+								<a class="list-group-item list-group-item-action subjectcontrol @(ViewBag.Control == "tasktypes" ? "active" : "")" data-bs-toggle="list" role="tab" asp-action="showtypes" asp-controller="type" asp-route-id="@Model.Subject.Id" aria-selected="false" tabindex="-1">
+									Task Types and Percentage
+								</a>
+								<a class="list-group-item list-group-item-action subjectcontrol @(ViewBag.Control == "schedule" ? "active" : "")" data-bs-toggle="list" role="tab"  asp-action="showschedules" asp-controller="schedule" asp-route-id="@Model.Subject.Id" aria-selected="false" tabindex="-1">
+									Schedule
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-9 col-xl-10">
+						<div class="tab-content">
+							<div class="tab-pane fade active show">
+
+								<div class="card">
+									<div class="card-body" id="controlTab" data-value="@ViewBag.Control">
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>

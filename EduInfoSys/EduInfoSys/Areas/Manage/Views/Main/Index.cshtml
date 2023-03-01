@@ -1,0 +1,115 @@
+﻿@model UserVM
+<h1 class="h3 mb-3">Main</h1>
+<div class="row">
+	<div class="col-xl-6">
+		<div class="row">
+			<div class="col-xl-12">
+		<div class="card">
+			<div class="card-body">
+				<div class="mb-2"><h4 class="text-primary"><strong>Information</strong></h4></div>
+				<p class="mb-0">Welcome back, <strong>@Model.User.FirstName @Model.User.LastName</strong>.</p>
+				<p>You are logged in to the system as <strong>@Model.Role</strong>.</p>
+			</div>
+		</div>
+	</div>
+			<div class="col-xl-6">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col mt-0">
+								<h5 class="card-title">Departments</h5>
+							</div>
+
+							<div class="col-auto">
+								<div class="stat text-primary">
+									<i class="fa-solid fa-object-group"></i>
+								</div>
+							</div>
+						</div>
+						<h1 class="mt-1 mb-3">@ViewBag.Departments.ToString("##,##")</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col mt-0">
+								<h5 class="card-title">Groups</h5>
+							</div>
+
+							<div class="col-auto">
+								<div class="stat text-primary">
+									<i class="fa-solid fa-users-rectangle"></i>
+								</div>
+							</div>
+						</div>
+						<h1 class="mt-1 mb-3">@ViewBag.Groups.ToString("##,##")</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col mt-0">
+								<h5 class="card-title">Teachers</h5>
+							</div>
+
+							<div class="col-auto">
+								<div class="stat text-primary">
+									<i class="fa-solid fa-person-chalkboard"></i>
+								</div>
+							</div>
+						</div>
+						<h1 class="mt-1 mb-3">@ViewBag.Teachers.ToString("##,##")</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col mt-0">
+								<h5 class="card-title">Students</h5>
+							</div>
+
+							<div class="col-auto">
+								<div class="stat text-primary">
+									<i class="fa-solid fa-graduation-cap"></i>
+								</div>
+							</div>
+						</div>
+						<h1 class="mt-1 mb-3">@ViewBag.Students.ToString("##,##")</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6">
+		<div class="card">
+			<div class="card-body">
+				<div class="mb-2"><h4 class="text-primary"><strong>Activities</strong></h4></div>
+				<table id="datatables-reponsive" class="table table-striped" style="width:100%">
+					<thead>
+						<tr>
+							<th scope="col">Date</th>
+							<th scope="col">Heading</th>
+							<th scope="col">Text</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (Log item in ViewBag.Logs)
+						{
+							<tr>
+								<th scope="row">@item.Date.ToString("dd.MM.yy HH:mm:ss")</th>
+								<td>@item.Heading</td>
+								<td>@item.Text</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

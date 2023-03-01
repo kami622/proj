@@ -1,0 +1,67 @@
+﻿@model TeacherUpdateVM
+<h1 class="h3 mb-3">Update subject teacher</h1>
+
+<div class="card">
+	<div class="card-body">
+		<form method="post">
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-4">
+						<label asp-for="UserId">User</label>
+						<select class="form-control choices-single" asp-for="UserId">
+							@foreach (AppUser user in ViewBag.Users)
+							{
+								@if (Model is not null && user.Id == Model.UserId)
+								{
+									<option selected value="@user.Id">@user.FirstName @user.LastName [@user.UserName]</option>
+								}
+								else
+								{
+									<option value="@user.Id">@user.FirstName @user.LastName [@user.UserName]</option>
+								}
+							}
+						</select>
+						<span asp-validation-for="UserId" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="GroupId">Group</label>
+						<select class="form-control choices-single2" id="groupSelect" asp-for="GroupId">
+							@foreach (Group item in ViewBag.Groups)
+							{
+								if (Model is not null && Model.GroupId == item.Id)
+								{
+									<option selected value="@item.Id">@item.Name [@item.Department.Name]</option>
+								}
+								else
+								{
+									<option value="@item.Id">@item.Name [@item.Department.Name]</option>
+								}
+							}
+						</select>
+						<span asp-validation-for="GroupId" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="SubjectId">Subject</label>
+						<select id="subjectSelect" data-href="@Url.Action("ShowSubjects")" class="form-control" asp-for="SubjectId">
+							@foreach (Subject subject in ViewBag.Subjects)
+							{
+								if (Model is not null && subject.Id == Model.SubjectId)
+								{
+									<option selected value="@subject.Id">@subject.Name</option>
+								}
+								else
+								{
+									<option value="@subject.Id">@subject.Name</option>
+								}
+							}
+						</select>
+						<span asp-validation-for="SubjectId" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div class="mt-1">
+				<button type="submit" class="btn btn-primary">Update</button> <a asp-action="index" class="btn btn-outline-secondary">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

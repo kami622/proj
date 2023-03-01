@@ -1,0 +1,108 @@
+﻿@model UserCreateVM
+
+<h1 class="h3 mb-3">Create new user</h1>
+
+<div class="card">
+	<div class="card-body">
+		<form method="post" enctype="multipart/form-data">
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-6">
+						<label asp-for="UserName">Username <span class="text-danger">*</span></label>
+						<input asp-for="UserName" class="form-control" placeholder="Enter username" />
+						<span asp-validation-for="UserName" class="text-danger"></span>
+					</div>
+					<div class="col-6">
+						<label asp-for="Role">Role <span class="text-danger">*</span></label>
+						<select asp-for="Role" class="form-control">
+							<option value="student">Student</option>
+							<option value="teacher">Teacher</option>
+							@if (ViewBag.IsSuper)
+							{
+								<option value="admin">Administrator</option>
+							}
+						</select>
+						<span asp-validation-for="Role" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-6">
+						<label asp-for="FirstName">First name <span class="text-danger">*</span></label>
+						<input asp-for="FirstName" class="form-control" placeholder="Enter first name" />
+						<span asp-validation-for="FirstName" class="text-danger"></span>
+					</div>
+					<div class="col-6">
+						<label asp-for="LastName">Last name <span class="text-danger">*</span></label>
+						<input asp-for="LastName" class="form-control" placeholder="Enter last name" />
+						<span asp-validation-for="LastName" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-6">
+						<label asp-for="Gender">Gender <span class="text-danger">*</span></label>
+						<select asp-for="Gender" class="form-control">
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+						<span asp-validation-for="Gender" class="text-danger"></span>
+					</div>
+					<div class="col-6">
+						<label asp-for="ImageFile">Photo <span class="text-muted">(opt.)</span></label>
+						<input asp-for="ImageFile" class="form-control" />
+						<span asp-validation-for="ImageFile" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-6">
+						<label asp-for="Email">Email <span class="text-muted">(opt.)</span></label>
+						<input type="text" asp-for="Email" class="form-control" data-inputmask="'alias': 'email'" inputmode="email" placeholder="Enter email address">
+						<span asp-validation-for="Email" class="text-danger"></span>
+					</div>
+					<div class="col-6">
+						<label asp-for="PhoneNumber">Phone number <span class="text-muted">(opt.)</span></label>
+						<input asp-for="PhoneNumber" class="form-control" placeholder="Enter phone number" />
+						<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-6">
+						<label asp-for="Password">Password <span class="text-danger">*</span></label>
+						<input asp-for="Password" class="form-control" placeholder="Enter password" />
+						<span asp-validation-for="Password" class="text-danger"></span>
+					</div>
+					<div class="col-6">
+						<label asp-for="ConfirmPassword">Confirm password <span class="text-danger">*</span></label>
+						<input asp-for="ConfirmPassword" class="form-control" placeholder="Repeat password" />
+						<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div class="mb-2">
+				<div class="row">
+					<div class="col-6">
+						<label asp-for="BirthDate">Birth date <span class="text-danger">*</span></label>
+						<input type="text" asp-for="BirthDate" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" placeholder="Enter birth date">
+						<span asp-validation-for="BirthDate" class="text-danger"></span>
+					</div>
+					<div class="col-6">
+						<label asp-for="AdditionalInfo">Additional information <span class="text-muted">(opt.)</span></label>
+						<textarea asp-for="AdditionalInfo" class="form-control" placeholder="Enter text"></textarea>
+						<span asp-validation-for="AdditionalInfo" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+			<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+			<div class="mt-2">
+				<button type="submit" class="btn btn-primary">Create</button> <a asp-action="index" class="btn btn-outline-secondary">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

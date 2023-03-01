@@ -1,0 +1,269 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EduInfoSys
+build_property.RootNamespace = EduInfoSys
+build_property.ProjectDir = D:\experiment\EduInfoSys\EduInfoSys\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\experiment\EduInfoSys\EduInfoSys
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Account/Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXEFjY291bnRcTm90aWZpY2F0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXEFjY291bnRcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Attendance/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXEF0dGVuZGFuY2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Attendance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXEF0dGVuZGFuY2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Attendance/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXEF0dGVuZGFuY2VcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Grades/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXEdyYWRlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Groups/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXEdyb3Vwc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Main/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXE1haW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Note/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXE5vdGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Note/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXE5vdGVcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Schedule/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNjaGVkdWxlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Schedule/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNjaGVkdWxlXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Settings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNldHRpbmdzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Shared/_AttendancePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNoYXJlZFxfQXR0ZW5kYW5jZVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Shared/_PasswordSettingsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNoYXJlZFxfUGFzc3dvcmRTZXR0aW5nc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Shared/_SchedulesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNoYXJlZFxfU2NoZWR1bGVzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Shared/_TaskTypesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNoYXJlZFxfVGFza1R5cGVzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Shared/_UpdateAttendancePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNoYXJlZFxfVXBkYXRlQXR0ZW5kYW5jZVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Source/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNvdXJjZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Source/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFNvdXJjZVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Subject/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFN1YmplY3RcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Task/Attachments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFRhc2tcQXR0YWNobWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Task/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFRhc2tcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Task/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFRhc2tcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Task/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFRhc2tcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Type/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFR5cGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/Type/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXFR5cGVcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Edu/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1XFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Activities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFjdGl2aXRpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Departments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERlcGFydG1lbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Departments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERlcGFydG1lbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Departments/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERlcGFydG1lbnRzXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Groups/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEdyb3Vwc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Groups/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEdyb3Vwc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Groups/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEdyb3Vwc1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Main/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXE1haW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Notes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXE5vdGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Shared/_UserDetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfVXNlckRldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Sources/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNvdXJjZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Students/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFN0dWRlbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Students/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFN0dWRlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Students/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFN0dWRlbnRzXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Subjects/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFN1YmplY3RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Subjects/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFN1YmplY3RzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Subjects/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFN1YmplY3RzXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Tasks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFRhc2tzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Teachers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFRlYWNoZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Teachers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFRlYWNoZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Teachers/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFRlYWNoZXJzXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Types/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFR5cGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFVzZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFVzZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/Users/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFVzZXJzXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Areas/Manage/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Views/Shared/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/experiment/EduInfoSys/EduInfoSys/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7g404kf8l4
